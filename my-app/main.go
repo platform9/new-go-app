@@ -4,14 +4,35 @@ import (
 	"fmt"
 	"net/http"
 	log "github.com/sirupsen/logrus"
+	viper "github.com/spf13/viper"
 	"github.com/gorilla/mux"
 )
 
+
+type Configuration struct {
+	Port int
+}
+
+func newConfig() Configuration {
+	viper.SetConfigName("config")
+	viper.AddConfigPath(".")
+	var configuration Configuration
+	if err := viper.ReadInConfig(); err != nil {
+		log.Fatalf("Error reading config file, %s", err)
+	}
+	err := viper.Unmarshal(&configuration)
+	if err != nil {
+		log.Fatalf("unable to decode into struct, %v", err)
+	}
+	return configuration
+}
+
 func main() {
+	c := newConfig()
 	r := newRouter()
 	r.HandleFunc("/", r.handler)
-	log.Info("starting")
-	log.Fatal(http.ListenAndServe(":8080", r))
+	log.Info("starting with config %v",c.Port)
+	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%v",c.Port), r))
 }
 
 type Router struct {

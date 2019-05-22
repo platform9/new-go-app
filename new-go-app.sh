@@ -15,5 +15,4 @@ function install_go {
 }
 
 install_prerequisites
-pushd my-app
-go run main.go
+go run my-app/main.go
