@@ -28,7 +28,10 @@ function setup_app {
         WORKSPACE=$HOME/go/src/github.com/$YOUR_USERNAME/$PROJECT
         mkdir -p $WORKSPACE ;
         cp -r $NGA/my-app/* $WORKSPACE
-        chmod 755 $WORKSPACE/run.sh
+
+	# Add gimme there to, just so everythings totally totally portable
+	cp go-bootstrap.sh $WORKSPACE
+	chmod 755 $WORKSPACE/run.sh
 }
 
 function yay {
