@@ -17,11 +17,15 @@ function getinput {
 function install_new_go_app {
         # Install new-go-app !
         if [[ ! -d /usr/local/bin/new-go-app/ ]] ; then
-                CURR_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-                mkdir $NGA
+		pushd /tmp
+			git clone https://github.com/platform9/new-go-app/
+		popd
+	else
+		echo "Already have new-go-app cloned to /tmp, using that."
         fi
-        echo "Updating /usr/local/bin/new-go-app !"
-        cp -r $CURR_DIR/* $NGA
+	mkdir -p $NGA
+	echo "Updating $NGA with contents from /tmp !"
+        cp -r /tmp/new-go-app $NGA
 }
 
 function setup_app {
