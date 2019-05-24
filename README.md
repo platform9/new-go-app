@@ -11,3 +11,4 @@ Doesnt require golang to be installed.
 - clone this repo
 - change the code in my-app/
 - run `new-go-app.sh`
+- It will tell you what to do !
