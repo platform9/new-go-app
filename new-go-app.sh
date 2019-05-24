@@ -1,5 +1,6 @@
 source other.sh
 NGA=/usr/local/bin/new-go-app/
+export PATH=$PATH:$NGA/
 #### CHANGE THESE AS NEEDED AFTER CLONING, or keep them as defaults.  Either way should work.
 
 function getinput {
