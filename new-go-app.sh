@@ -6,8 +6,8 @@ export PATH=$PATH:$NGA/
 
 echo "Q: Does this have to be written in Golang?"
 echo "A: No dear."
-echo "Q: Why?"
-echo "A: Because new-go-app is so easy!"
+echo "Q: Then why are we doing this?"
+echo "A: Because new-go-app is so easy! AND I LIKE TYPES!"
 echo "Q: Are you sure about that?"
 echo "A: Yes dear."
 
