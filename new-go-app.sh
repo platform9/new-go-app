@@ -21,8 +21,8 @@ function install_new_go_app {
 	popd
 	mkdir -p $NGA
 	echo "Updating $NGA with contents from /tmp !"
-	# Again, update if needed.
-	cp -r /tmp/new-go-app $NGA
+	# Hardcoded to avoid anything bad, NGA shouldnt need to ever change.
+	rm -rf /usr/local/bin/new-go-app/ && mv /tmp/new-go-app /usr/local/bin/new-go-app
 }
 
 function setup_app {
