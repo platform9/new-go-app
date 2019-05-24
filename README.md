@@ -8,7 +8,11 @@ Doesnt require golang to be installed.
 
 # instructions
 
-- clone this repo
-- change the code in my-app/
-- run `new-go-app.sh`
-- It will tell you what to do !
+- Do this... `git clone https://github.comp/platform9/new-go-app.git ; cd new-go-app ; ./new-go-app.sh`
+- Answer the questions
+- cd to your fresh gopath and start hacking something useful together.
+
+# What next?
+
+- Tell your friends to stop writing bash scripts for one off programs
+
