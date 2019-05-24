@@ -15,17 +15,15 @@ function getinput {
 }
 
 function install_new_go_app {
-        # Install new-go-app !
-        if [[ ! -d /usr/local/bin/new-go-app/ ]] ; then
-		pushd /tmp
-			git clone https://github.com/platform9/new-go-app/
-		popd
-	else
-		echo "Already have new-go-app cloned to /tmp, using that."
-        fi
+	git clone https://github.com/platform9/new-go-app/ /tmp/new-go-app
+	# just in case its already there, update...
+	pushd /tmp/new-go-app
+		git pull
+	popd
 	mkdir -p $NGA
 	echo "Updating $NGA with contents from /tmp !"
-        cp -r /tmp/new-go-app $NGA
+	# Again, update if needed.
+	cp -r /tmp/new-go-app $NGA
 }
 
 function setup_app {
