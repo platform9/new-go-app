@@ -30,8 +30,6 @@ function setup_app {
         mkdir -p $WORKSPACE ;
         cp -r $NGA/my-app/* $WORKSPACE
 
-	# Add gimme there to, just so everythings totally totally portable
-	cp go-bootstrap.sh $WORKSPACE
 	chmod 755 $WORKSPACE/run.sh
 }
 
