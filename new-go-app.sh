@@ -1,29 +1,29 @@
+source other.sh
+
 #### CHANGE THESE AS NEEDED AFTER CLONING, or keep them as defaults.  Either way should work.
 
-YOUR_USERNAME=jayunit100 # change this
-PROJECT=new-go-app
+echo "Enter your git or github username, anything will do:"
+read YOUR_USERNAME
+echo "Enter the name of this app, again, anything will do:"
+read PROJECT
+
+echo "Creating project $PROJECT under $YOUR_USERNAME, ok ?"
+read x
+
+# Install new-go-app !
+if [[ ! -d ~/.new-go-app ]] ; then
+        NEW_GO_APP=`pwd`
+        mv $NEW_GO_APP ~/.new-go-app/
+fi
 
 #### Any edits you need to make after here == a bug that i need to fix :)
 
 WORKSPACE=$HOME/go/src/github.com/$YOUR_USERNAME/$PROJECT
-cd $WORKSPACE
+mkdir -p $WORKSPACE ;
 
-export PATH=$PATH:$HOME/bin/
+echo "Changed directory to $WORKSPACE, created."
+cp -r ~/.new-go-app/my-app/* $WORKSPACE
 
-function install_prerequisites {
-	if [[ ! -f ~/bin/gimme ]] ; then 	
-		mkdir ~/bin/gimme
-		curl -sL -o ~/bin/gimme https://raw.githubusercontent.com/travis-ci/gimme/master/gimme
-		chmod +x ~/bin/gimme
-	else
-		echo "gimme found"
-	fi
-}
-function install_go {
-	eval "$(GIMME_GO_VERSION=1.4 gimme)"
-	go version
-}
-
-install_prerequisites
-install_go
-go run my-app/main.go
+echo "All done ! Now run ... "
+echo "cd $WORKSPACE ; go run main.go"
+echo "And do something useful !!!"
