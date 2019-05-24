@@ -6,6 +6,10 @@ export PATH=$PATH:$NGA/
 
 echo "Q: Does this have to be written in Golang?"
 echo "A: No dear."
+echo "Q: Why?"
+echo "A: Because new-go-app is so easy!"
+echo "Q: Are you sure about that?"
+echo "A: Yes dear."
 
 function getinput {
         echo "Enter your git or github username, anything will do:"
