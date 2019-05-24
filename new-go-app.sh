@@ -14,6 +14,21 @@ function getinput {
 }
 
 function install_new_go_app {
+	cat << EOF
+	 _   _                  _____                                _ _ _ 
+| \ | |                / ____|           /\                 | | | |
+|  \| | _____      __ | |  __  ___      /  \   _ __  _ __   | | | |
+| . ` |/ _ \ \ /\ / / | | |_ |/ _ \    / /\ \ | '_ \| '_ \  | | | |
+| |\  |  __/\ V  V /  | |__| | (_) |  / ____ \| |_) | |_) | |_|_|_|
+|_| \_|\___| \_/\_/    \_____|\___/  /_/    \_\ .__/| .__/  (_|_|_)
+                                              | |   | |            
+                                              |_|   |_|            
+Q: Does this have to be done in bash?
+A: No.
+	
+	EOF
+
+
 	git clone https://github.com/platform9/new-go-app/ /tmp/new-go-app
 	# just in case its already there, update...
 	pushd /tmp/new-go-app
