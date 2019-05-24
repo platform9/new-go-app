@@ -3,19 +3,9 @@
 NGA=/usr/local/bin/new-go-app/
 export PATH=$PATH:$NGA/
 
-cat << EOF
 
-| \ | |                / ____|           /\                 | | | |
-|  \| | _____      __ | |  __  ___      /  \   _ __  _ __   | | | |
-| . ` |/ _ \ \ /\ / / | | |_ |/ _ \    / /\ \ | '_ \| '_ \  | | | |
-| |\  |  __/\ V  V /  | |__| | (_) |  / ____ \| |_) | |_) | |_|_|_|
-|_| \_|\___| \_/\_/    \_____|\___/  /_/    \_\ .__/| .__/  (_|_|_)
-                                              | |   | |            
-                                              |_|   |_|            
-Q: Does this have to be done in bash?
-A: No.
-EOF
-
+echo "Q: Does this have to be written in Golang?"
+echo "A: No dear."
 
 function getinput {
         echo "Enter your git or github username, anything will do:"
