@@ -1,4 +1,3 @@
-source go-bootstrap.sh
 NGA=/usr/local/bin/new-go-app/
 export PATH=$PATH:$NGA/
 #### CHANGE THESE AS NEEDED AFTER CLONING, or keep them as defaults.  Either way should work.
@@ -42,7 +41,7 @@ function yay {
         echo "And do something useful !!!"
 }
 
-getinput
 install_new_go_app
+getinput
 setup_app
 yay
