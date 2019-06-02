@@ -15,7 +15,7 @@
 
 The best way to learn how new-go-app works is ... to try it!
 
-- Do this... `git clone https://github.comp/platform9/new-go-app.git ; cd new-go-app ; ./new-go-app.sh`
+- Do this... `git clone https://github.com/platform9/new-go-app.git ; cd new-go-app ; ./new-go-app.sh`
 - Answer the questions
 - cd to your fresh gopath and start hacking something useful together.
 
